@@ -8,6 +8,7 @@ export const getItemSchema = Joi.object({
 
 export const reserveItemSchema = Joi.object({
   itemId: Joi.string().required(),
+  warehouseId: Joi.string().required(),
   quantity: Joi.number().integer().min(1).required(),
   note: Joi.string().max(200),
 });
