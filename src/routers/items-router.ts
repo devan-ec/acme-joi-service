@@ -10,7 +10,7 @@ export const reserveItemSchema = Joi.object({
   itemId: Joi.string().required(),
   warehouseId: Joi.string().required(),
   quantity: Joi.number().integer().min(1).required(),
-  note: Joi.string().max(200),
+  note: Joi.string().max(500),
 });
 
 export const itemsRouter = Router();
